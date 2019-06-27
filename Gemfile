@@ -88,13 +88,9 @@ group :production do
 end
 
 gem 'kaminari'
-gem 'fog-aws'
 gem 'jquery-rails'
 gem 'devise'
 gem 'active_hash'
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'omniauth-google-oauth2'
 gem 'ancestry'
 gem 'bootstrap', '~> 4.1.1'
 gem "haml-rails", "~> 2.0"

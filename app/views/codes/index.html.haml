@@ -1,8 +1,40 @@
-%p hello world
+.wrapper
+  %h1 one_code
+
+  = render partial: 'code', collection: @codes
+
+  -# - @codes.each do |code|
+
+  = form_with(model: @code, url: "/codes", method: :post, local: true) do |f|
+
+    .form
+
+      .form-group
+        = f.label :Name
+        %span.form__group
+        = f.text_field :name, autofocus: true, autocomplete: "off", class: 'field-input', placeholder: "例）hello"
+
+        = f.label :Program
+        %span.form-group
+        = f.text_field :program, autofocus: true,autocomplete: "off", class: 'field-input', placeholder: "例）world"
+
+      = f.submit "保存", class: 'btn btn-primary'
+
+
+
+  %a.btn.btn-primary{:href => "#", :role => "button"} Link
+  %button.btn.btn-primary{:type => "submit"} Button
+  %input.btn.btn-primary{type: "button", value: "Input"}/
+  -# %input.btn.btn-primary{:type => "submit", :value => "Submit"}/
+  %input.btn.btn-primary{:type => "reset", :value => "Reset"}/
+
+
 
 / コピー対象要素とコピーボタン
-%input#copyTarget{:readonly => "readonly", :type => "text", :value => "コピー対象の文言"}/
-%button{:onclick => "copyToClipboard()"} Copy text
+-# %input#copyTarget{:readonly => "readonly", :type => "text", :value => "コピー対象の文言"}/
+-# %button{:onclick => "copyToClipboard()"} Copy code
+
+
 
 / bodyタグ内の下部に以下を入力する
 :javascript
@@ -14,6 +46,6 @@
       // 選択しているテキストをクリップボードにコピーする
       document.execCommand("Copy");
       // コピーをお知らせする
-      alert("コピーできました！ : " + copyTarget.value);
+      -# alert("コピーできました！ : " + copyTarget.value);
   }
 
