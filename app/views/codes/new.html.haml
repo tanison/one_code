@@ -1,0 +1,14 @@
+= form_with(model: @code, url: "/codes", method: :post, local: true) do |f|
+
+  .form
+
+    .form__group
+      = f.label :Name
+      %span.form__group--require
+      = f.text_field :name, autofocus: true, autocomplete: "off", class: 'field-input', placeholder: "例）hello world"
+
+      = f.label :Program
+      %span.form__group--require
+      = f.text_field :program, autofocus: true,autocomplete: "off", class: 'field-input', placeholder: "例）hello world"
+
+    = f.submit "保存", class: 'btn btn-primary'
