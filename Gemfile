@@ -92,5 +92,5 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'active_hash'
 gem 'ancestry'
-gem 'bootstrap', '~> 4.1.1'
 gem "haml-rails", "~> 2.0"
+gem "bootstrap", ">= 4.3.1"

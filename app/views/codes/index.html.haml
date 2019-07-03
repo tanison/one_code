@@ -22,12 +22,10 @@
 
 
 
-  %a.btn.btn-primary{:href => "#", :role => "button"} Link
-  %button.btn.btn-primary{:type => "submit"} Button
-  %input.btn.btn-primary{type: "button", value: "Input"}/
-  -# %input.btn.btn-primary{:type => "submit", :value => "Submit"}/
-  %input.btn.btn-primary{:type => "reset", :value => "Reset"}/
-
+  -# %a.btn.btn-primary{:href => "#", :role => "button"} Link
+  -# %button.btn.btn-primary{:type => "submit"} Button
+  -# %input.btn.btn-primary{type: "button", value: "Input"}/
+  -# %input.btn.btn-primary{:type => "reset", :value => "Reset"}/
 
 
 / コピー対象要素とコピーボタン
@@ -35,17 +33,19 @@
 -# %button{:onclick => "copyToClipboard()"} Copy code
 
 
-
 / bodyタグ内の下部に以下を入力する
 :javascript
-  function copyToClipboard() {
+  function copyToClipboard(num) {
       // コピー対象をJavaScript上で変数として定義する
-      var copyTarget = document.getElementById("copyTarget");
+      var id = num
+      var copyTarget = document.getElementById(id);
       // コピー対象のテキストを選択する
       copyTarget.select();
       // 選択しているテキストをクリップボードにコピーする
       document.execCommand("Copy");
       // コピーをお知らせする
-      -# alert("コピーできました！ : " + copyTarget.value);
+      alert("コピーできました！ : " + copyTarget.value);
   }
+
+
 

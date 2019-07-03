@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Code.create!(
+  name: '1',
+  program: 'binding.pry'
+)
+Code.create!(
+  name: '2',
+  program: 'bbbbbb'
+)
