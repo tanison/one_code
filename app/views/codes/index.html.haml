@@ -44,8 +44,7 @@
       // 選択しているテキストをクリップボードにコピーする
       document.execCommand("Copy");
       // コピーをお知らせする
-      alert("コピーできました！ : " + copyTarget.value);
+      notify($('#flash-notice').text().trim());
   }
-
 
 

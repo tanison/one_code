@@ -3,7 +3,7 @@
   = code.id
   = code.name
   %input{id: "#{code.id}", readonly: "readonly", type: "text", value: "#{code.program}"}/
-  %button{:onclick => "copyToClipboard(#{code.id})"} Copy code
+  %button{onclick: "copyToClipboard(#{code.id})"} Copy code
 
 -# %input#copyTarget{:readonly => "readonly", :type => "text", :value => "コピー対象の文言"}/
 -# %button{:onclick => "copyToClipboard()"} Copy code
